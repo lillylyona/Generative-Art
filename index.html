@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generative Noise Banner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand">
+          <span class="logo-dot"></span>
+          <span class="brand-name">NoiseBanner</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#controls">Controls</a>
+          <a href="#build">Build</a>
+        </nav>
+
+        <a class="cta" href="#build">View Project</a>
+      </div>
+    </header>
+
+    <!-- Hero with p5 banner -->
+    <main>
+      <section class="hero">
+        <div class="hero-canvas" id="banner"></div>
+
+        <div class="container hero-content">
+          <p class="pill">Interactive Generative Art</p>
+          <h1>Flowing Noise Waves</h1>
+          <p class="sub">
+            A responsive generative banner that uses Perlin noise and responds to mouse movement.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#controls">How to interact</a>
+            <a class="btn ghost" href="#about">Project notes</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-number">Noise</div>
+              <div class="stat-label">Controlled randomness</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">Input</div>
+              <div class="stat-label">Mouse X / Y</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">Live</div>
+              <div class="stat-label">Evolves over time</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content sections -->
+      <section class="section" id="about">
+        <div class="container two-col">
+          <div>
+            <h2>About</h2>
+            <p>
+              This banner uses Perlin noise to generate smooth, organic wave motion.
+              Instead of designing a fixed image, the system draws multiple flowing lines
+              every frame, producing an evolving composition.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Technique</h3>
+            <ul>
+              <li><strong>Generative method:</strong> Randomness & Noise</li>
+              <li><strong>Output:</strong> Layered wave lines</li>
+              <li><strong>Behaviour:</strong> Continuous evolution over time</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="controls">
+        <div class="container two-col">
+          <div class="card">
+            <h3>Interaction Controls</h3>
+            <ul>
+              <li><strong>Mouse X</strong> → changes noise scale (smooth ↔ chaotic)</li>
+              <li><strong>Mouse Y</strong> → changes wave height (subtle ↔ dramatic)</li>
+              <li><strong>Click</strong> → regenerate (new seed)</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Why interaction matters</h2>
+            <p>
+              The user doesn’t place shapes manually. Instead, their movement influences
+              the parameters of the generative system in real time, keeping the artwork
+              autonomous while still responsive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="build">
+        <div class="container">
+          <div class="card">
+            <h2>Build Notes</h2>
+            <p>
+              This page is fully responsive. The p5 canvas automatically resizes to the
+              hero banner width and height.
+            </p>
+            <p class="small">
+              Tip: run with a local server (VS Code Live Server) so scripts load properly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-row">
+          <p class="small">Generative Art Task 2 — Interactive Noise Banner</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="banner.js"></script>
+  </body>
+</html>
