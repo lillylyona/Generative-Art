@@ -1,4 +1,3 @@
-//Variables
 let t = 0; //t = a timer value, slowly increase it every frame to make the noise “move” like animation.
 let seedValue = 1234; //seedValue = a number that controls the “randomness pattern” for Perlin noise.
 
@@ -39,7 +38,7 @@ function draw() {
     const baseY = i * lineGap; // baseY is the normal height of that line before we distort it.
 
     beginShape();
-    for (let x = 0; x <= width; x += 10) { //This moves across the canvas in steps of 10 pixels. Smaller steps (like 5) = smoother line but slower performance.  Bigger steps (like 20) = more jagged but faster.
+    for (let x = 0; x <= width; x += 10) { //This moves across the canvas in steps of 10 pixels. 
       const n = noise(x * scale, i * 0.08, t); //Get a Perlin noise value for each x position
       const y = baseY + (n - 0.5) * amp; //Convert that noise into a y position
       vertex(x, y);
